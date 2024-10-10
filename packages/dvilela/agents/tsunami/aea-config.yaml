@@ -14,18 +14,18 @@ connections:
 - valory/http_client:0.23.0:bafybeihi772xgzpqeipp3fhmvpct4y6e6tpjp4sogwqrnf3wqspgeilg4u
 - valory/ledger:0.19.0:bafybeig7woeog4srdby75hpjkmx4rhpkzncbf4h2pm5r6varsp26pf2uhu
 - valory/p2p_libp2p_client:0.1.0:bafybeid3xg5k2ol5adflqloy75ibgljmol6xsvzvezebsg7oudxeeolz7e
-- valory/farcaster:0.1.0:bafybeibbdas7lxbipksodaphjms3uop7vnzjqkroktjq2g6wbvgtlldaxi
+- valory/farcaster:0.1.0:bafybeiheveiqtopgf43bdfhyvwnhlxs3frpt7u6wp3rvltvgdbrljlvnia
 - valory/twitter:0.1.0:bafybeif6g5sulx4hpm75vt776r6d7obfawsrjom3xq2fsgzdb4d3dssoy4
 - dvilela/kv_store:0.1.0:bafybeiekugvb2kan4342hliluxl3h5och3fjwqoafdyttpcn57evvyztq4
 - dvilela/llama:0.1.0:bafybeiauzzq2pxmn4brdqgdyxrrikbc5ywjpmetlajyohute5qtnn37aqq
-- dvilela/suno:0.1.0:bafybeihy2phtjwbz27ntv55wxfk754kp5tjceujzsdbppjafljoydjflhi
+- dvilela/suno:0.1.0:bafybeidtwt2x7vmlv4bebxq2rgbp5i6zrzb5dc6coo75hjf5f7cyb3oihi
 - valory/http_server:0.22.0:bafybeihpgu56ovmq4npazdbh6y6ru5i7zuv6wvdglpxavsckyih56smu7m
 contracts:
 - valory/gnosis_safe:0.1.0:bafybeidcb25wneezfd2iaiqa7ygxlimwwacvycahhenvpw7tdvwdigllzm
 - valory/gnosis_safe_proxy_factory:0.1.0:bafybeidwwhkqin3zchbjl7ro6n3tj5kwbfhfvmrdpuxn7owy3b4ktrluba
 - valory/multisend:0.1.0:bafybeig5byt5urg2d2bsecufxe5ql7f4mezg3mekfleeh32nmuusx66p4y
 - valory/service_registry:0.1.0:bafybeiekytropd5ysnap2wkekub3byi5jbda3qll7awchvhu5plbpafhmi
-- dvilela/olas_registries:0.1.0:bafybeict2xpt56m2a5ehezd2oylrhbhahrsas3dht2fdfbnrejlr5mdqpa
+- dvilela/olas_registries:0.1.0:bafybeibvt66n225obit3u5arwfiucn6y4bcfozgo65t3fa6xkevnjriirm
 - dvilela/olas_tokenomics:0.1.0:bafybeifslkoofg3ohscvovzhgaa3up5jhmb6fac4r35b5wcdjphafzssxu
 - dvilela/olas_treasury:0.1.0:bafybeidd6yelhuztyvtbso6fkc4iiq2pmegh734exyrtcbqh62yfwgluqy
 - dvilela/veolas:0.1.0:bafybeianbmtmg2mn3nh4p7ih4xnugvofdvrtdtbzasdo66hidzxh27ndle
@@ -48,8 +48,8 @@ skills:
 - valory/transaction_settlement_abci:0.1.0:bafybeic3tccdjypuge2lewtlgprwkbb53lhgsgn7oiwzyrcrrptrbeyote
 - valory/registration_abci:0.1.0:bafybeieu7vq3pyns4t5ty6u3sbmpkd7yznpg3rmqifoz3jhy7pmqyg3w6q
 - valory/reset_pause_abci:0.1.0:bafybeiameewywqigpupy3u2iwnkfczeiiucue74x2l5lbge74rmw6bgaie
-- dvilela/tsunami_abci:0.1.0:bafybeifmrtt6mithz4sevb5r56xculf56b2ajz657gpnbcvpbf7z3ocqy4
-- dvilela/tsunami_chained_abci:0.1.0:bafybeia7jdcg3us2bziaqf45kv5buvceub66f3hcxxc6sr43l3ythexahm
+- dvilela/tsunami_abci:0.1.0:bafybeie3ksc5ltycjjezyzew7ijv4qqm6dbq5bspe6bdv22eflmtmlx46m
+- dvilela/tsunami_chained_abci:0.1.0:bafybeiak2ybg5rqwajr6ewe4prijbjk6wbq3o36sn5c3j4lq25gaqeuq3a
 default_ledger: ethereum
 required_ledgers:
 - ethereum
@@ -229,7 +229,7 @@ models:
       twitter_credentials: ${str:{}}
       event_tracking_enabled: ${bool:true}
       repo_tracking_enabled: ${bool:true}
-      omen_tracking_enabled: ${bool:true}
+      omen_tracking_enabled: ${bool:false}
       suno_enabled: ${bool:true}
       governance_enabled: ${bool:true}
       telegram_token: ${str:null}
@@ -237,6 +237,7 @@ models:
       service_endpoint: ${str:https://tsunami.dummy.com/}
       boardroom_api_key: ${str:null}
       subgraph_api_key: ${str:null}
+      personality: ${str:null}
 ---
 public_id: valory/http_server:0.22.0:bafybeicblltx7ha3ulthg7bzfccuqqyjmihhrvfeztlgrlcoxhr7kf6nbq
 type: connection

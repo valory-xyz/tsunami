@@ -124,6 +124,10 @@ def main() -> None:
             "subgraph_api_key"
         ] = f"${{str:{os.getenv('SUBGRAPH_API_KEY')}}}"
 
+        config[8]["models"]["params"]["args"][
+            "personality"
+        ] = f"${{str:{os.getenv('PERSONALITY')}}}"
+
     with open(Path("tsunami", "aea-config.yaml"), "w", encoding="utf-8") as file:
         yaml.dump_all(config, file, sort_keys=False)
 

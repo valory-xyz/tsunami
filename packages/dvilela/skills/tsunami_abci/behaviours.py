@@ -536,10 +536,17 @@ class TsunamiBaseBehaviour(BaseBehaviour, ABC):  # pylint: disable=too-many-ance
         footer: Optional[str] = None,
     ) -> Generator[None, None, Optional[List[str]]]:
         """Build thread"""
-
+        personality_to_prompt = {
+                'pirate': SYSTEM_PROMPTS['SYSTEM_PROMPT_PIRATE'],
+                'olad': SYSTEM_PROMPTS['SYSTEM_PROMPT_OLAD'],
+                'techie': SYSTEM_PROMPTS['SYSTEM_PROMPT_TECHIE'],
+                'alien': SYSTEM_PROMPTS['SYSTEM_PROMPT_ALIEN'],
+                'pirate_cat' : SYSTEM_PROMPTS['SYSTEM_PROMPT_PIRATE_CAT']
+        }
         # Randomly select a personality
         # TODO: this only works for a single agent
-        system_prompt_base = secrets.choice(SYSTEM_PROMPTS)  # nosec
+        system_prompt_base = personality_to_prompt.get(self.params.personality, 'pirate') # string 
+        #system_prompt_base = secrets.choice(SYSTEM_PROMPTS)  # nosec
         self.context.logger.info("Llama is building a tweet...")
 
         attempts = 0

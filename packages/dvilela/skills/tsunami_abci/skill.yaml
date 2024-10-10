@@ -8,27 +8,27 @@ license: Apache-2.0
 aea_version: '>=1.0.0, <2.0.0'
 fingerprint:
   __init__.py: bafybeiaicsttkv5xapta2eqove7si2pyv3zmshkqolluxpnrh3hkulqsqu
-  behaviours.py: bafybeifuiozfpwg3siw4ba7nnu4lphfvuphneatn4svumq2ryxrpnst36y
+  behaviours.py: bafybeie2iadaqkd23siown7l5lmnfqu5ifpm4rtv76xrw5pefj2bn6posi
   dialogues.py: bafybeidmgjji6zw6wcvhijrxb74batj2kc2lskfuqxv76duv2j7azcqwra
   fsm_specification.yaml: bafybeidlfuabsldhezjaovupkvzrtydpcimzz6r56phsi2psrtdzougu4u
   handlers.py: bafybeid3gkfdpqk55pgvn6oneikdboz22iw6cmv2ucaieh6lfccd5eu3qi
   html/index.html: bafybeia7qpqjoredervujs5naa7rawl7d7u25y5jkoszfn45znaxfthhoi
   html/surf.html: bafybeic5g7xwh5rsztxmrftkddtklghj2qewdijxm5pbb4wonp6lcjjvei
-  models.py: bafybeicl6x7sqcwudskut7ldawnaiuntfhy5irjyxitmu3qmcxowbbthhi
+  models.py: bafybeif74qxsceadwon6u2myvwdeyfvke4moi4dgr7hhhrsb2x7agdzzty
   payloads.py: bafybeicejv72ralhxgwzkcprgj5akehu65jfik2cpwsnrxs7zlglpdrl6u
-  prompts.py: bafybeifdpqtxpqko66pkh23dz5sca6hhdtmplbqwsynxtpra25mztsxozy
+  prompts.py: bafybeidhnwvuodnv3qjue7idnll2pp3roscdahxuu5mkdnvklkcbmnhc44
   rounds.py: bafybeidmfi6v335lgvjidptqrvuruhtk5hhq3fkcubwbln7xbn2iiok7di
   subgraph.py: bafybeigme6r3cwiiu5l7r55rcbj7y37b62cxtlsnewpkbjqcbadwte32xm
 fingerprint_ignore_patterns: []
 connections:
 - dvilela/kv_store:0.1.0:bafybeiekugvb2kan4342hliluxl3h5och3fjwqoafdyttpcn57evvyztq4
 - dvilela/llama:0.1.0:bafybeiauzzq2pxmn4brdqgdyxrrikbc5ywjpmetlajyohute5qtnn37aqq
-- dvilela/suno:0.1.0:bafybeihy2phtjwbz27ntv55wxfk754kp5tjceujzsdbppjafljoydjflhi
-- valory/farcaster:0.1.0:bafybeibbdas7lxbipksodaphjms3uop7vnzjqkroktjq2g6wbvgtlldaxi
+- dvilela/suno:0.1.0:bafybeidtwt2x7vmlv4bebxq2rgbp5i6zrzb5dc6coo75hjf5f7cyb3oihi
+- valory/farcaster:0.1.0:bafybeiheveiqtopgf43bdfhyvwnhlxs3frpt7u6wp3rvltvgdbrljlvnia
 - valory/twitter:0.1.0:bafybeif6g5sulx4hpm75vt776r6d7obfawsrjom3xq2fsgzdb4d3dssoy4
 - valory/http_server:0.22.0:bafybeihpgu56ovmq4npazdbh6y6ru5i7zuv6wvdglpxavsckyih56smu7m
 contracts:
-- dvilela/olas_registries:0.1.0:bafybeict2xpt56m2a5ehezd2oylrhbhahrsas3dht2fdfbnrejlr5mdqpa
+- dvilela/olas_registries:0.1.0:bafybeibvt66n225obit3u5arwfiucn6y4bcfozgo65t3fa6xkevnjriirm
 - dvilela/olas_tokenomics:0.1.0:bafybeifslkoofg3ohscvovzhgaa3up5jhmb6fac4r35b5wcdjphafzssxu
 - dvilela/olas_treasury:0.1.0:bafybeidd6yelhuztyvtbso6fkc4iiq2pmegh734exyrtcbqh62yfwgluqy
 - dvilela/veolas:0.1.0:bafybeianbmtmg2mn3nh4p7ih4xnugvofdvrtdtbzasdo66hidzxh27ndle
@@ -174,6 +174,7 @@ models:
       service_endpoint: tsunami.dummy.com/
       boardroom_api_key: null
       subgraph_api_key: null
+      personality: null
     class_name: Params
   requests:
     args: {}
